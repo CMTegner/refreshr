@@ -3,7 +3,7 @@ var URL = require("url"),
     updated = Date.now(),
     port = 9898;
 
-require("fs").watch("./").on("change", function (event, filename) {
+require("fs").watch("./").on("change", function () {
     updated = Date.now();
 });
 
