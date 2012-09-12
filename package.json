@@ -1,6 +1,6 @@
 {
     "name": "refreshr",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A tool for automatically refreshing the browser when updates are made to static files",
     "author": "Christian Maughan Tegnér <christian.tegner@gmail.com>",
     "contributors": [
@@ -14,7 +14,7 @@
         "url": "https://github.com/CMTegner/refreshr.git"
     },
     "dependencies": {
-        "connect": "2.3.x"
+        "node-static": "0.6.1"
     },
     "engine": {
         "node": ">=0.8"

@@ -1,15 +1,21 @@
-var CONNECT = require("connect"),
-    updated = Date.now();
-
-CONNECT()
-    .use(CONNECT.query())
-    .use(function (request, response) {
-        response.writeHead(200, { "Content-type": "text/javascript; charset=utf-8" });
-        response.end(request.query.callback + "(" + updated + ");");
-    })
-    .listen(9898);
+var URL = require("url"),
+    static = new (require("node-static").Server)("./"),
+    updated = Date.now(),
+    port = 9898;
 
 require("fs").watch("./").on("change", function (event, filename) {
     updated = Date.now();
 });
+
+require("http").createServer(function (request, response) {
+    var url = URL.parse(request.url, true);
+    if (url.pathname === "/watchr.js") {
+        response.writeHead(200, { "Content-type": "text/javascript; charset=utf-8" });
+        response.end(url.query.callback + "(" + updated + ");");
+    } else {
+        static.serve(request, response);
+    }
+}).listen(port);
+
+console.log("<script src=\"http://localhost:" + port + "/refreshr.js\"></script>");
 

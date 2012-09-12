@@ -18,7 +18,7 @@
         func = "refreshr_" + Math.floor(Math.random() * 10e11);
         window[func] = scriptLoaded;
         script = document.createElement("script");
-        script.src = "http://localhost:9898?callback=" + func;
+        script.src = "http://localhost:9898/watchr.js?callback=" + func;
         document.scripts[0].insertBefore(script);
     }
 

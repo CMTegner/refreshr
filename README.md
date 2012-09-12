@@ -1,5 +1,5 @@
 TODO
 ====
-* Make watchr.js serve refreshr.js to simplify setup
-* Consider removing connect as a dependency
+* Add CLI
+* Make port number configurable via CLI options
 
