@@ -13,11 +13,18 @@
         "type": "git",
         "url": "https://github.com/CMTegner/refreshr.git"
     },
+    "bugs": {
+        "url": "https://github.com/CMTegner/refreshr/issues"
+    },
     "dependencies": {
         "node-static": "0.6.1"
     },
     "engine": {
         "node": ">=0.8"
-    }
+    },
+    "preferGlobal": "true",
+    "bin": {
+        "watchr": "watchr.js"
+     }
 }
 

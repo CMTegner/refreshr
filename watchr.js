@@ -1,5 +1,7 @@
+#! /usr/bin/env node
+
 var URL = require("url"),
-    static = new (require("node-static").Server)("./"),
+    static = new (require("node-static").Server)(__dirname),
     updated = Date.now(),
     port = 9898;
 
