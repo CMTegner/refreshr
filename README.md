@@ -1,4 +1,4 @@
-refresh
+refresh [![Build Status](https://secure.travis-ci.org/CMTegner/refreshr.png)](http://travis-ci.org/CMTegner/refreshr)
 =======
 Coming soon
 
