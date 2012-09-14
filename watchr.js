@@ -1,7 +1,8 @@
 #! /usr/bin/env node
+"use strict";
 
 var URL = require("url"),
-    static = new (require("node-static").Server)(__dirname),
+    fileServer = new (require("node-static").Server)(__dirname),
     updated = Date.now(),
     port = 9898;
 
@@ -15,7 +16,7 @@ require("http").createServer(function (request, response) {
         response.writeHead(200, { "Content-type": "text/javascript; charset=utf-8" });
         response.end(url.query.callback + "(" + updated + ");");
     } else {
-        static.serve(request, response);
+        fileServer.serve(request, response);
     }
 }).listen(port);
 

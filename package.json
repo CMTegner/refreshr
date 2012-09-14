@@ -19,12 +19,19 @@
     "dependencies": {
         "node-static": "0.6.1"
     },
+    "devDependencies": {
+        "vows": "0.6.x",
+        "grunt": "0.3.x"
+    },
     "engine": {
         "node": ">=0.8"
     },
     "preferGlobal": "true",
     "bin": {
         "watchr": "watchr.js"
+     },
+     "scripts": {
+         "test": "grunt"
      }
 }
 
