@@ -28,7 +28,7 @@
     },
     "preferGlobal": "true",
     "bin": {
-        "watchr": "watchr.js"
+        "refreshr": "watchr.js"
      },
      "scripts": {
          "test": "grunt"

@@ -1,19 +1,22 @@
-refresh [![Build Status](https://secure.travis-ci.org/CMTegner/refreshr.png)](http://travis-ci.org/CMTegner/refreshr)
+refreshr [![Build Status](https://secure.travis-ci.org/CMTegner/refreshr.png)](http://travis-ci.org/CMTegner/refreshr)
 =======
-Coming soon
+refreshr is a tool which uses JSONP to poll for changes in an arbitrary directory and automtaically refreshes the webpage when any changes are detected.
 
 Installation
 ============
-Coming soon
+```
+› npm install -g refreshr
+```
 
-Using
+Usage
 =====
-Coming soon
+Start refreshr in the directory you wish to watch:
 
-TODO
-====
-* Complete README
-* Make port number configurable via CLI options
-* Track each individual file and only refresh when files matching a predefined whitelist are updated
-* Ensure that updates to subfolders are also caught
+```
+› refreshr
+<script src="http://localhost:9898/refreshr.js"></script>
+```
+
+
+Copy the script-tag and paste it into your .html file. Your webpage will automatically reload itself when changes are made to files contained in the directory where you started `refreshr`.
 
