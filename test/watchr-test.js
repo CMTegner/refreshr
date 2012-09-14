@@ -1,3 +1,5 @@
+"use strict";
+
 var VOWS = require("vows"),
     ASSERT = require("assert");
 
