@@ -5,6 +5,12 @@ module.exports = function (grunt) {
         lint: {
             all: ["*.js", "test/*.js"]
         },
+        watch: {
+            all: {
+               files: "<config:lint.all>",
+               tasks: "lint vows"
+            }
+        },
         jshint: {
             options: {
                 // Enforcing options
