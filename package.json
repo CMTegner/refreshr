@@ -24,6 +24,7 @@
     "devDependencies": {
         "vows": "0.6.x",
         "grunt": "0.3.x",
+        "grunt-vows": "0.1.x",
         "request": "2.11.x"
     },
     "engine": {

@@ -81,22 +81,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.task.registerTask("vows", "Run vows test", function() {
-        var done = this.async(),
-            vows = require("child_process").spawn("vows", ["--spec"]);
-
-        vows.stdout.on("data", function (data) {
-            grunt.log.writeln(data);
-        });
-
-        vows.stderr.on("data", function (data) {
-            grunt.log.writeln(data);
-        });
-
-        vows.on('exit', function (code) {
-            done(code);
-        });
-    });
+    grunt.loadNpmTasks("grunt-vows");
 
     grunt.registerTask("default", "lint vows");
 
