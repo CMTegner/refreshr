@@ -21,7 +21,8 @@
     },
     "devDependencies": {
         "vows": "0.6.x",
-        "grunt": "0.3.x"
+        "grunt": "0.3.x",
+        "request": "2.11.x"
     },
     "engine": {
         "node": ">=0.8"
