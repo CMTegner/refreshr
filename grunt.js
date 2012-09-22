@@ -78,6 +78,9 @@ module.exports = function (grunt) {
                 worker: false,
                 wsh: false
             }
+        },
+        vows: {
+            reporter: "spec"
         }
     });
 
