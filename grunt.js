@@ -80,7 +80,10 @@ module.exports = function (grunt) {
             }
         },
         vows: {
-            reporter: "spec"
+            all: {
+                files: "test/*.js",
+                reporter: "spec"
+            }
         }
     });
 

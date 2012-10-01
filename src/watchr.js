@@ -21,4 +21,3 @@ require("http").createServer(function (request, response) {
 }).listen(port);
 
 console.log("<script src=\"http://localhost:" + port + "/refreshr.js\"></script>");
-

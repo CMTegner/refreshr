@@ -10,11 +10,11 @@ var VOWS = require("vows"),
 exports.suite = VOWS.describe("watchr").addBatch({
     "when loaded": {
         topic: function () {
-            var WATCHR = require("../watchr.js");
-            REQUEST("http://localhost:9898", this.callback);
+            require("../src/watchr.js");
+            REQUEST("http://localhost:9898/refreshr.js", this.callback);
         },
 
-        "should start a server": function (error, response, body) {
+        "should start a server": function (error, response) {
             ASSERT.isNull(error);
             ASSERT.strictEqual(response.statusCode, 200);
         }
@@ -22,12 +22,12 @@ exports.suite = VOWS.describe("watchr").addBatch({
 
     "GET /refreshr.js": {
         topic: function () {
-            var WATCHR = require("../watchr.js");
+            require("../src/watchr.js");
             REQUEST("http://localhost:9898/refreshr.js", this.callback);
         },
 
         "should serve refreshr.js": function (error, response, body) {
-            var refreshr = FS.readFileSync(__dirname + "/../refreshr.js", "UTF-8");
+            var refreshr = FS.readFileSync(__dirname + "/../src/refreshr.js", "UTF-8");
             ASSERT.isNull(error);
             ASSERT.strictEqual(response.statusCode, 200);
             ASSERT.strictEqual(body, refreshr);
@@ -36,8 +36,8 @@ exports.suite = VOWS.describe("watchr").addBatch({
 
     "GET /watchr.js": {
         topic: function () {
-            var WATCHR = require("../watchr.js"),
-                callback = this.callback;
+            var callback = this.callback;
+            require("../src/watchr.js");
             FS.openSync(filename, "w");
             timestamp = FS.statSync(filename).ctime.getTime();
             setTimeout(function () {
