@@ -7,8 +7,8 @@ module.exports = function (grunt) {
         },
         watch: {
             all: {
-               files: "<config:lint.all>",
-               tasks: "lint vows"
+                files: "<config:lint.all>",
+                tasks: "lint vows"
             }
         },
         jshint: {
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                 trailing: true,
                 //maxparams: 0,
                 //maxdepth: 0,
-                maxstatements: 1,
+                //maxstatements: 0,
                 //maxcomplexity: 0,
 
                 // Relaxing options
@@ -73,7 +73,6 @@ module.exports = function (grunt) {
                 mootools: false,
                 node: true,
                 nonstandard: false,
-                prototype: false,
                 rhino: false,
                 worker: false,
                 wsh: false
